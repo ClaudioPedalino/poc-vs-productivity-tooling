@@ -11,6 +11,8 @@
 [] VS updates => https://github.com/kendrahavens/ProductivityFeatures
 
 [] Shorcuts y funcionalidades útiles
+Todo se resuelve con [ctrl + .], [ctrl + q] y [ctrl + spacebar] :)
+	
 	~ search bar
 	~ paste as json
 	~ inmediate windows
@@ -52,7 +54,7 @@
 	- modificar firma
 	- nombrar explicitamente parámetros
 [] cleanup
-[] snippets
+[] snippets || Toolbox
 	- prop
 	- ctor
 	- reg
@@ -75,5 +77,5 @@
 	 && formatting 
 	 && naming
 	 && intelisense
-[] codemaid
-[] sonar linter
+[] Codemaid
+[] Sonar linter

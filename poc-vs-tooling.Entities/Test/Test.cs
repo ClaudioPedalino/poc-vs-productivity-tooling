@@ -109,6 +109,7 @@ namespace poc_vs_tooling.Entities.Test
             test.WrapManyParameters(1, 2, 3, 2M, new List<int> { 1, 2, 3 }, new List<string>() { "Hola", "Tarola" });
         }
 
+
         public void NamedParameters()
         {
             // Cuál es Abril cuál Junio?
@@ -121,6 +122,22 @@ namespace poc_vs_tooling.Entities.Test
 
             #endregion
         }
+
+
+        public void PatterMatching(Mock1 mock1)
+        {
+            // 02 [CP] Pattern Matching
+            var mock = mock1 as Mock2;
+
+            // 01 [CP] Invertir if
+            if (mock == null)
+            {
+                return;
+            }
+
+            mock.MyProperty1 = new Action(() => Console.WriteLine("test"));
+        }
+
 
         public void VerifyAnalazyer()
         {

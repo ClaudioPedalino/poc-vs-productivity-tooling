@@ -4,6 +4,7 @@ using System.Text;
 
 namespace poc_vs_tooling.Core.Models.ResponseDto
 {
+    //[DebuggerDisplay("{FirstName} {LastName}")]
     public class GetPersonResponseDto
     {
         public Guid PersonId { get; set; }

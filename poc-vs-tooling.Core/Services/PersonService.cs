@@ -24,7 +24,6 @@ namespace poc_vs_tooling.Core.Services
 
         public PaginatedResult<GetPersonResponseDto> GetAll(GetPersonRequestDto request)
         {
-            // [CP] Add debugger display
             var results = _personRepository.GetAll().AsQueryable().AsNoTracking();
             if (!results.Any())
                 return new PaginatedResult<GetPersonResponseDto>(new List<GetPersonResponseDto>()) { Message = "No hay resultados" };
@@ -52,7 +51,9 @@ namespace poc_vs_tooling.Core.Services
 
             ///mapeamos
             var response = new List<GetPersonResponseDto>();
-            //[CP] Convertir en linqO
+
+            // [CP] Add debugger display
+            // [CP] Convertir en linqO
             foreach (var item in filterResults)
             {
                 // [CP] Simplificar inicializacion
@@ -66,6 +67,7 @@ namespace poc_vs_tooling.Core.Services
                 model.Address = item.Address;
                 model.Phone = item.Phone;
                 response.Add(model);
+                // [CP] Conditional breakpoint
             }
 
             return new PaginatedResult<GetPersonResponseDto>(
@@ -132,7 +134,6 @@ namespace poc_vs_tooling.Core.Services
             return new Result().Success("Se borró el registro correctamente");
         }
 
+
     }
 }
-
-
