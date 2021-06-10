@@ -1,0 +1,1 @@
+dotnet sonarscanner begin /k:"pocvs" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="74f3ec28edc54b805d176d01a6fcb6594e636cf9" && dotnet build && dotnet sonarscanner end /d:sonar.login="74f3ec28edc54b805d176d01a6fcb6594e636cf9"
