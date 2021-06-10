@@ -15,6 +15,7 @@
 	~ bookmarks
 	~ track-active
 	~ line numbers
+	~ Second row pinned tabs
 	- Ctrl K + Ctr  ===> formatear
 	- Ctrl K + Ctrl D  ===> clean
 	- Ctrl R + Ctr R => rename references
@@ -34,7 +35,6 @@
 ~ C# Código compilado => https://sharplab.io/
 
 
-
 [] contructores
 	- añadir parámetro
 	- construir con parámetros
@@ -47,27 +47,23 @@
 [] metodos
 	- modificar firma
 [] cleanup
-
-	- alcances
 [] snippets
 	- prop
 	- ctor
 	- reg
+	- Ctrl K + Ctrl X => Abre la lista de snippets
 	- Ctrl K + Ctrl B  ===> abrir snippets manager
-[] sonar linter
-[] vs2019 
+[] sugerencias intelicode vs2019 
 	- modificacion regular
-	- buscador general
-	- pin tabs
-	- sugerencias de vs según dónde estemos parados
-		- Extraer en método
-		- simplificar
-		- coalessence
-		- bodied expresion
-		- pattern matching en un switch
-		- invertir if
-		- simplificar expresión
-		- condicional expresion (ternario)
-	- trackear file cuando vas navegando
+	- extraer en método
+	- simplificar inicializacion
+	- coalessence expresion
+	- bodied expresion
+	- switch expresion y pattern matching (según version)
+	- invertir if
+	- simplificar expresión
+	- condicional expresion (ternario)
 	- conditional breakpoint
-	- inline breackpoint
+		- inline breakpoint
+[] codemaid
+[] sonar linter
