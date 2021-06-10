@@ -1,0 +1,73 @@
+
+⚠️ AVISO PARROQUIAL
+	[⚠️] Resharper
+		Hoy en día Roslyn y el motor de resharper pueden convivir, mismo resharper te da una opción para extenderse sobre roslyn y no pisar el comportamiento
+	[⚠️] Ryder/VSCode	
+
+
+[] VS Evolución => https://github.com/kendrahavens/ProductivityFeatures
+
+[] Shorcuts y funcionalidades útiles
+	~ search bar
+	~ paste as json
+	~ inmediate windows
+	~ c# playground / c# interactivo
+	~ bookmarks
+	~ track-active
+	~ line numbers
+	- Ctrl K + Ctr  ===> formatear
+	- Ctrl K + Ctrl D  ===> clean
+	- Ctrl R + Ctr R => rename references
+	- Ctrl + Sfhit V  ===> history clipboard
+	- Ctrl + , => Go to... [?]
+		- Ctrl + Sfhit + T => go to by files
+	- configurar.. ===> navigate back/fwd
+	- Ctrl KK_KN_KP   ===> navigate marcadores
+	- Ctrl D  ===> duplicar linea
+	- Alt + Flechita  ===> mover linea
+	- Ctrl + Q  ===> Buscador
+[] modificar shortcut
+
+[] Herramientas externas
+~ Json2 => https://app.quicktype.io/
+~ C# Playground => https://dotnetfiddle.net/
+~ C# Código compilado => https://sharplab.io/
+
+
+
+[] contructores
+	- añadir parámetro
+	- construir con parámetros
+	- pullear al padre
+	- simplificar inicialización
+[] interfaces
+	- extrear en interfaz
+	- implementar métodos
+	- pullear método
+[] metodos
+	- modificar firma
+[] cleanup
+
+	- alcances
+[] snippets
+	- prop
+	- ctor
+	- reg
+	- Ctrl K + Ctrl B  ===> abrir snippets manager
+[] sonar linter
+[] vs2019 
+	- modificacion regular
+	- buscador general
+	- pin tabs
+	- sugerencias de vs según dónde estemos parados
+		- Extraer en método
+		- simplificar
+		- coalessence
+		- bodied expresion
+		- pattern matching en un switch
+		- invertir if
+		- simplificar expresión
+		- condicional expresion (ternario)
+	- trackear file cuando vas navegando
+	- conditional breakpoint
+	- inline breackpoint

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>poc_vs_tooling.Core</RootNamespace>
+  </PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Bogus" Version="32.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.15" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\poc-vs-tooling.Data\poc-vs-tooling.Data.csproj" />
+	</ItemGroup>
+	
+</Project>
