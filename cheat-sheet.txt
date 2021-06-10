@@ -1,11 +1,14 @@
 
+=============================================================
+
 ⚠️ AVISO PARROQUIAL
 	[⚠️] Resharper
 		Hoy en día Roslyn y el motor de resharper pueden convivir, mismo resharper te da una opción para extenderse sobre roslyn y no pisar el comportamiento
 	[⚠️] Ryder/VSCode	
 
+=============================================================
 
-[] VS Evolución => https://github.com/kendrahavens/ProductivityFeatures
+[] VS updates => https://github.com/kendrahavens/ProductivityFeatures
 
 [] Shorcuts y funcionalidades útiles
 	~ search bar
@@ -14,6 +17,7 @@
 	~ c# playground / c# interactivo
 	~ bookmarks
 	~ track-active
+	~ inline-parameters
 	~ line numbers
 	~ Second row pinned tabs
 	- Ctrl K + Ctr  ===> formatear
@@ -34,7 +38,7 @@
 ~ C# Playground => https://dotnetfiddle.net/
 ~ C# Código compilado => https://sharplab.io/
 
-
+=============================================================
 [] contructores
 	- añadir parámetro
 	- construir con parámetros
@@ -46,6 +50,7 @@
 	- pullear método
 [] metodos
 	- modificar firma
+	- nombrar explicitamente parámetros
 [] cleanup
 [] snippets
 	- prop
@@ -65,5 +70,10 @@
 	- condicional expresion (ternario)
 	- conditional breakpoint
 		- inline breakpoint
+[] text editor > C# > code style 
+	 && general 
+	 && formatting 
+	 && naming
+	 && intelisense
 [] codemaid
 [] sonar linter

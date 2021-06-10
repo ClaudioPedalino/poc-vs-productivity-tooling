@@ -17,7 +17,7 @@ namespace poc_vs_tooling.Api.Controllers
     [ApiController]
     public class PersonController : ControllerBase
     {
-
+        //[CP] Refactor Me :)
         private readonly DataContext _dataContext;
 
         public PersonController(DataContext dataContext)
@@ -67,11 +67,9 @@ namespace poc_vs_tooling.Api.Controllers
             var service = new PersonService(new PersonRepository(_dataContext));
             var response = service.Delete(id);
 
-            if (response.HasErrors)
-            {
-                return BadRequest(response.Message);
-            }
-            return Ok(response);
+            return response.HasErrors 
+                ? BadRequest(response.Message) 
+                : (ActionResult<Result>)Ok(response);
         }
     }
 }

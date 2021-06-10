@@ -10,6 +10,6 @@ namespace poc_vs_tooling.Data.Interfaces
         IEnumerable<Person> GetAll();
         Person GetById(Guid entityId);
         void Create(Person entity);
-        void Delete(Person entityId);
+        void Delete(Person test); //[CP] rename to match implementation
     }
 }

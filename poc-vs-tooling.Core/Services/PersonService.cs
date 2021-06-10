@@ -1,4 +1,5 @@
-﻿using poc_vs_tooling.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using poc_vs_tooling.Core.Entities;
 using poc_vs_tooling.Core.Extensions;
 using poc_vs_tooling.Core.Helpers;
 using poc_vs_tooling.Core.Models.Common;
@@ -24,14 +25,14 @@ namespace poc_vs_tooling.Core.Services
         public PaginatedResult<GetPersonResponseDto> GetAll(GetPersonRequestDto request)
         {
             // [CP] Add debugger display
-            var results = _personRepository.GetAll();
+            var results = _personRepository.GetAll().AsQueryable().AsNoTracking();
             if (!results.Any())
                 return new PaginatedResult<GetPersonResponseDto>(new List<GetPersonResponseDto>()) { Message = "No hay resultados" };
 
 
             ///filtramos
             // [CP] Extraer en método
-            var filterResults = results.AsQueryable()
+            var filterResults = results
                 .WhereIf(!string.IsNullOrWhiteSpace(request.FirstName), x => x.FirstName.Contains(request.FirstName))
                 .WhereIf(!string.IsNullOrWhiteSpace(request.LastName), x => x.LastName.Contains(request.LastName))
                 .WhereIf(request.BirthdayFrom.HasValue, x => x.Birthday.Date >= request.BirthdayFrom.Value.Date)
@@ -43,10 +44,10 @@ namespace poc_vs_tooling.Core.Services
 
             ///paginamos
             filterResults = filterResults
-              .OrderBy(x => x.LastName)
-              .ThenBy(x => x.FirstName)
-              .Skip((request.PageNumber - 1) * request.PageSize)
-              .Take(request.PageSize);
+                .OrderBy(x => x.LastName)
+                .ThenBy(x => x.FirstName)
+                .Skip((request.PageNumber - 1) * request.PageSize)
+                .Take(request.PageSize);
 
 
             ///mapeamos
@@ -72,13 +73,13 @@ namespace poc_vs_tooling.Core.Services
                 totalCount: results.Count(),
                 pageSize: request.PageSize,
                 totalPages: PaginationHelper.GetPages(request.PageSize, results.Count())
-                );
+            );
         }
 
         public Result Create(CreatePersonRequestDto request)
         {
             /// (01) VALIDACIONES 
-            // [CP] Modificación regular / intellicode
+            // [CP] Modificación recurrente
             if (request.FirstName == null || request.FirstName == "" || request.FirstName == " ")
                 return new Result().Error($"{nameof(request.FirstName)} is invalid");
 
@@ -113,7 +114,7 @@ namespace poc_vs_tooling.Core.Services
             entity.CreatedAt = DateTime.UtcNow.AddHours(-3);
 
 
-            /// (03) Guardamos
+            /// (03) GUARDAR
             _personRepository.Create(entity);
 
             return new Result().Success($"Se creó el registro {entity.FirstName} {entity.LastName} correctamente");
